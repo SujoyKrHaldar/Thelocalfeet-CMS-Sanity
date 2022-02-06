@@ -52,9 +52,17 @@ export default {
     },
 
     {
+      name: "preBooking",
+      title: "Pre Booking",
+      description: "Pre booking available or not.",
+      type: "boolean",
+      initialValue: true,
+    },
+
+    {
       name: "offer",
       title: "Add offer",
-      description: "Activate offer to thei product",
+      description: "Activate offer to the product",
       type: "boolean",
       initialValue: false,
     },
