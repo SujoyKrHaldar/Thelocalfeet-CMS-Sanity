@@ -31,17 +31,6 @@ export default {
       type: "reference",
       to: { type: "category" },
     },
-
-    {
-      name: "description",
-      title: "Description",
-      type: "text",
-    },
-    {
-      name: "caption",
-      title: "Caption",
-      type: "string",
-    },
     {
       name: "status",
       title: "Status",
@@ -82,6 +71,17 @@ export default {
     },
 
     {
+      name: "description",
+      title: "Description",
+      type: "text",
+    },
+    {
+      name: "caption",
+      title: "Caption",
+      type: "string",
+    },
+
+    {
       name: "price",
       title: "Price",
       validation: (Rule) => Rule.required(),
@@ -91,6 +91,7 @@ export default {
     {
       name: "photo",
       title: "Main photo",
+      validation: (Rule) => Rule.required(),
       type: "image",
       options: {
         hotspot: true,
