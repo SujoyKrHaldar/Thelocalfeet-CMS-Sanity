@@ -26,20 +26,19 @@ export default {
         maxLength: 96,
       },
     },
+
     {
-      name: "publishedAt",
-      title: "Published at",
-      description: "It will help to sort all blogs.",
-      type: "date",
-      options: {
-        dateFormat: "DD-MM-YYYY",
-        calendarTodayLabel: "Today",
-      },
+      name: "keywords",
+      title: "Keywords",
+      description: "Use keywords for SEO optimization.",
+      type: "string",
+      validation: (Rule) => Rule.required(),
     },
+
     {
       name: "subtitle",
       description: "seo meta-description",
-      type: "string",
+      type: "text",
       title: "Description",
     },
 
@@ -53,14 +52,16 @@ export default {
         hotspot: true,
       },
     },
-
     {
-      name: "keywords",
-      title: "Keywords",
-      description: "Use keywords for SEO optimization.",
-      type: "string",
+      name: "publishedAt",
+      title: "Published at",
+      description: "It will help to sort all blogs.",
+      type: "date",
+      options: {
+        dateFormat: "DD-MM-YYYY",
+        calendarTodayLabel: "Today",
+      },
     },
-
     {
       name: "body",
       description: "Write your blog here.",

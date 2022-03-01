@@ -9,17 +9,10 @@ export default {
     {
       name: "title",
       title: "Title",
+      validation: (Rule) => Rule.required(),
       description:
         "Title will appear in main blog page as well as in blog list.",
       type: "string",
-    },
-
-    {
-      name: "subtitle",
-      description:
-        "Subtitle will appear in main blog page as well as in blog list.",
-      type: "string",
-      title: "Subtitle",
     },
 
     {
@@ -34,12 +27,19 @@ export default {
         maxLength: 96,
       },
     },
-
     {
-      name: "country",
-      title: "Country",
-      type: "reference",
-      to: { type: "country" },
+      name: "keywords",
+      title: "Keywords",
+      description: "Use keywords for SEO optimization.",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "subtitle",
+      description:
+        "Subtitle will appear in main blog page as well as in blog list.",
+      type: "text",
+      title: "Subtitle",
     },
 
     {
@@ -54,10 +54,10 @@ export default {
     },
 
     {
-      name: "keywords",
-      title: "Keywords",
-      description: "Use keywords for SEO optimization.",
-      type: "string",
+      name: "country",
+      title: "Country",
+      type: "reference",
+      to: { type: "country" },
     },
 
     {

@@ -21,8 +21,8 @@ export default {
 
   preview: {
     select: {
-      title: "email",
-      subtitle: "_createdAt",
+      title: "name",
+      subtitle: "email",
       media: "icon",
     },
   },
