@@ -14,7 +14,7 @@ React.js, Next.js, Sanity studio, Google Analytics, vercel hosting, Sanity cloud
 
 ### Screen shot:
 
-![Desktop screenshot](https://github.com/SujoyKrHaldar/thelocalfeet.com-v2/blob/main/preview/Desktop.png)
+![Desktop screenshot](https://github.com/SujoyKrHaldar/Thelocalfeet-3.0/blob/main/preview/Desktop.png)
 
 ## About Sanity
 
