@@ -49,6 +49,7 @@ export default {
       name: "ogImage",
       title: "Image",
       type: "image",
+      validation: (Rule) => Rule.required(),
       description: "Og:image.",
       options: {
         hotspot: true,
