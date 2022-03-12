@@ -3,6 +3,18 @@ export default {
     {
       name: "document-list",
       options: {
+        title: "SEO (Static pages)",
+        types: ["seo"],
+        showCreateButton: false,
+      },
+      layout: {
+        width: "small",
+        height: "small",
+      },
+    },
+    {
+      name: "document-list",
+      options: {
         title: "Latest Articles",
         order: "_updatedAt desc",
         types: ["blog"],
@@ -66,7 +78,7 @@ export default {
         showCreateButton: false,
       },
       layout: {
-        width: "medium",
+        width: "small",
         height: "small",
       },
     },

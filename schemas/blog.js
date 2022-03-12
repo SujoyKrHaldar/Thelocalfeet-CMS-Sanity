@@ -10,8 +10,14 @@ export default {
       name: "title",
       title: "Title",
       validation: (Rule) => Rule.required(),
-      description:
-        "Title will appear in main blog page as well as in blog list.",
+      description: "Title of the Blog.",
+      type: "string",
+    },
+
+    {
+      name: "metaTitle",
+      title: "Meta title",
+      description: "Title for the Blog's seo.",
       type: "string",
     },
 
@@ -19,7 +25,7 @@ export default {
       name: "slug",
       title: "Slug",
       description:
-        "The slug (x-y-z) will look like this, 'https://thelocalfeet.com/blogs/x-y-z'",
+        "The slug (x-y-z) will look like this thelocalfeet.com/explore/x-y-z",
       type: "slug",
       validation: (Rule) => Rule.required(),
       options: {
@@ -30,16 +36,16 @@ export default {
     {
       name: "keywords",
       title: "Keywords",
-      description: "Use keywords for SEO optimization.",
+      description: "Use keywords for SEO optimization and search filter",
       type: "string",
       validation: (Rule) => Rule.required(),
     },
     {
       name: "subtitle",
-      description:
-        "Subtitle will appear in main blog page as well as in blog list.",
+      description: "Short description for blog as well meta:description.",
       type: "text",
-      title: "Subtitle",
+      title: "Description",
+      validation: (Rule) => Rule.required(),
     },
 
     {
