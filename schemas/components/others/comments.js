@@ -22,7 +22,7 @@ export default {
       name: "post",
       title: "Post",
       type: "reference",
-      to: [{ type: "blog" }, { type: "photoBlog" }],
+      to: [{ type: "blog" }, { type: "photoBlog" }, { type: "travelPosts" }],
     },
     {
       name: "email",
