@@ -1,9 +1,10 @@
-import { GrArticle } from "react-icons/gr";
+import { MdTravelExplore } from "react-icons/md";
+import moment from "moment";
 
 export default {
-  name: "blog",
-  title: "Blog",
-  icon: GrArticle,
+  name: "travelPosts",
+  title: "Travel posts",
+  icon: MdTravelExplore,
   type: "document",
   fields: [
     {
@@ -60,10 +61,10 @@ export default {
     },
 
     {
-      name: "country",
-      title: "Country",
+      name: "travelCategory",
+      title: "Category",
       type: "reference",
-      to: { type: "country" },
+      to: { type: "travelCategory" },
     },
 
     {
@@ -87,13 +88,14 @@ export default {
   preview: {
     select: {
       title: "title",
-      author: "country.name",
+      date: "publishedAt",
       media: "mainImage",
     },
     prepare(selection) {
-      const { author } = selection;
+      const { date } = selection;
+      const dateFormate = moment(date).format("MMMM Do YYYY, h:mm a");
       return Object.assign({}, selection, {
-        subtitle: author && `${author}`,
+        subtitle: dateFormate && `${dateFormate}`,
       });
     },
   },

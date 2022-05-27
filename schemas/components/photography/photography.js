@@ -1,5 +1,5 @@
-
-import { HiPhotograph } from 'react-icons/hi'
+import moment from "moment";
+import { HiPhotograph } from "react-icons/hi";
 
 export default {
   name: "photography",
@@ -7,11 +7,10 @@ export default {
   icon: HiPhotograph,
   type: "document",
   fields: [
-      {
+    {
       name: "photo",
       title: "Photograph",
-      description:
-        "Photo for your Photography page",
+      description: "Photo for your Photography page",
       type: "image",
       options: {
         hotspot: true,
@@ -34,12 +33,19 @@ export default {
       title: "Instagram link",
       type: "url",
     },
-    
   ],
   preview: {
     select: {
-        title: "caption",
-        media: "photo",
+      title: "caption",
+      date: "_createdAt",
+      media: "photo",
+    },
+    prepare(selection) {
+      const { date } = selection;
+      const dateFormate = moment(date).format("MMMM Do YYYY, h:mm a");
+      return Object.assign({}, selection, {
+        subtitle: dateFormate && `${dateFormate}`,
+      });
     },
   },
 };
