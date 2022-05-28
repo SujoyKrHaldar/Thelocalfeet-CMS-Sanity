@@ -1,4 +1,5 @@
 import { BiPhotoAlbum } from "react-icons/bi";
+import moment from "moment";
 
 export default {
   name: "shop",
@@ -131,8 +132,15 @@ export default {
   preview: {
     select: {
       title: "name",
-      subtitle: "_createdAt",
+      date: "_createdAt",
       media: "photo",
+    },
+    prepare(selection) {
+      const { date } = selection;
+      const dateFormate = moment(date).format("MMMM Do YYYY, h:mm a");
+      return Object.assign({}, selection, {
+        subtitle: dateFormate && `${dateFormate}`,
+      });
     },
   },
 };

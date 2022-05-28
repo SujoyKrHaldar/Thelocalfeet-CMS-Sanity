@@ -2,6 +2,7 @@ import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
 
 import seo from "./components/others/seo";
+import ads from "./components/affiliate-ads/ads";
 import shop from "./components/shop/shop";
 import blog from "./components/blogs/blog";
 import offer from "./components/shop/offer";
@@ -26,6 +27,7 @@ export default createSchema({
     travelCategory,
     travelPosts,
     comments,
+    ads,
     productCategory,
     offer,
     shop,
